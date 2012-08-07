@@ -14,8 +14,10 @@ But it isn't! These are the steps needed:
 
  1. Create a section for your chunks with a textarea or inputfield.
  2. Create a datasource with the chunks and attach them to the pages where you are going to use them.
- 3. Include the `chunks.xsl`-utility on each page where you are going to use chunks.
+ 3. Include the `chunks.xsl`-utility on each page where you are going to use chunks. You can find this in the `utilities`-folder of the extension and copy it to the `utilities`-folder of your workspace.
  4. Call them like so: `<xsl:apply-templates select="chunks/entry[@id=...]" mode="chunk" />`, where `@id` offcourse is the ID of your chunk.
+
+Please note that for HTML content you need to have the [HTML Manipulation utility](http://getsymphony.com/download/xslt-utilities/view/20035/) imported.
 
 To have less overhead, you can filter the chunks datasource to only load the chunks needed for specific pages:
 
