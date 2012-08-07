@@ -1,8 +1,38 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Giel
- * Date: 7-8-12
- * Time: 11:05
- * To change this template use File | Settings | File Templates.
- */
+
+	Class extension_chunks extends Extension
+	{
+		public function getSubscribedDelegates(){
+			return array(
+				array(
+					'page' => '/frontend/',
+					'delegate' => 'FrontendParamsResolve',
+					'callback' => 'addParameter'
+				),
+				array(
+					'page' => '/backend/',
+					'delegate' => 'InitaliseAdminPageHead',
+					'callback' => 'modifyHeader'
+				)
+			);
+		}
+
+		public function addParameter($context)
+		{
+			if(Frontend::instance()->isLoggedIn())
+			{
+				$context['params']['chunks-logged-in'] = 'yes';
+			} else {
+				$context['params']['chunks-logged-in'] = 'no';
+			}
+		}
+
+		public function modifyHeader($context)
+		{
+			if(isset($_GET['chunks']))
+			{
+				Administration::instance()->Page->addStylesheetToHead(URL.'/extensions/chunks/assets/chunks.css');
+				Administration::instance()->Page->addScriptToHead(URL.'/extensions/chunks/assets/chunks.js');
+			}
+		}
+	}

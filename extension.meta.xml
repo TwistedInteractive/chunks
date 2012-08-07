@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="chunks" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Chunks</name>
+	<description>Symphony Chunks</description>
+	<repo type="github">https://github.com/kanduvisla/chunks</repo>
+	<types>
+		<type>Workflow</type>
+	</types>
+	<authors>
+		<author>
+			<name github="kanduvisla" symphony="kanduvisla">Giel Berkers</name>
+			<website>http://www.gielberkers.com/</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0.0" date="2012-08-07" min="2.3" />
+	</releases>
+</extension>

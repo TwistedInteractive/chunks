@@ -1,0 +1,5 @@
+#header, #context { display: none; }
+div.field { display: none; }
+div.field-textarea, div.field-input { display: block; }
+.two.columns .column.primary { width: 100%; }
+button.delete { display: none; }
