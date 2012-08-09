@@ -1,7 +1,7 @@
 <xsl:stylesheet version="1.0"
 				xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template match="content" mode="chunk">
+	<xsl:template match="*" mode="chunk">
 		<xsl:choose>
 			<xsl:when test="$chunks-logged-in = 'yes'">
 				<div class="chunks-edit" style="outline: 1px dashed #ccc; position: relative; background: rgba(255, 255, 255, .5);">
