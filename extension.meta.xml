@@ -13,6 +13,10 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.1.0" date="2012-10-10" min="2.3">
+			Added functionality to disable the edit button when the author is logged in. This might come in handy for
+			when you're editing CSS or something like that.
+		</release>
 		<release version="1.0.0" date="2012-08-07" min="2.3" />
 	</releases>
 </extension>
