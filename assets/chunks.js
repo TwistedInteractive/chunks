@@ -1,11 +1,3 @@
-/**
- * Created with JetBrains PhpStorm.
- * User: Giel
- * Date: 7-8-12
- * Time: 11:38
- * To change this template use File | Settings | File Templates.
- */
-
 jQuery(function($){
     $('input[name="action[save]"]').click(function(e){
         e.preventDefault();
